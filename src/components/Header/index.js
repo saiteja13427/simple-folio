@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+	const [mobileMenu, setMobileMenu] = useState(false);
 	return (
 		<>
 			<nav>
@@ -13,6 +14,9 @@ const Header = () => {
 								className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 								aria-controls="mobile-menu"
 								aria-expanded="false"
+								onClick={() => {
+									setMobileMenu((prev) => !prev);
+								}}
 							>
 								<span className="sr-only">Open main menu</span>
 								<svg
@@ -48,7 +52,7 @@ const Header = () => {
 							</button>
 						</div>
 						<div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-							<div className="hidden sm:ml-6 sm:block">
+							<div className="hidden sm:block">
 								<div className="flex space-x-4">
 									<Link
 										to="/"
@@ -58,6 +62,24 @@ const Header = () => {
 										Home
 									</Link>
 
+									<Link
+										to="/education"
+										className="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+									>
+										Education
+									</Link>
+									<Link
+										to="/experience"
+										className="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+									>
+										Experience
+									</Link>
+									<Link
+										to="/projects"
+										className="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+									>
+										Projects
+									</Link>
 									<Link
 										to="/about"
 										className="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
@@ -73,7 +95,7 @@ const Header = () => {
 									</Link>
 
 									<Link
-										to="/blog"
+										to="/blogs"
 										className="text-gray-700 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium"
 									>
 										Blogs
@@ -84,38 +106,43 @@ const Header = () => {
 					</div>
 				</div>
 
-				<div className="sm:hidden" id="mobile-menu">
-					<div className="space-y-1 px-2 pt-2 pb-3">
-						<a
-							href="#"
-							className="text-gray-700 hover:bg-gray-700 hover:text-white text-white block px-3 py-2 rounded-md text-base font-medium"
-							aria-current="page"
-						>
-							Dashboard
-						</a>
+				{mobileMenu && (
+					<div
+						className="sm:hidden bg-gray-200 mx-2 rounded-b-lg"
+						id="mobile-menu"
+					>
+						<div className="space-y-1 px-2 pt-2 pb-3">
+							<Link
+								to="/"
+								className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+								aria-current="page"
+							>
+								Home
+							</Link>
 
-						<a
-							href="#"
-							className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-						>
-							Team
-						</a>
+							<Link
+								to="/about"
+								className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+							>
+								About
+							</Link>
 
-						<a
-							href="#"
-							className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-						>
-							Projects
-						</a>
+							<Link
+								to="/contact"
+								className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+							>
+								Contact
+							</Link>
 
-						<a
-							href="#"
-							className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-						>
-							Calendar
-						</a>
+							<Link
+								to="/blogs"
+								className="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+							>
+								Blogs
+							</Link>
+						</div>
 					</div>
-				</div>
+				)}
 			</nav>
 		</>
 	);
