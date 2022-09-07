@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { name, resume, tagline } from "../../data/portfolio";
 
 const Home = () => {

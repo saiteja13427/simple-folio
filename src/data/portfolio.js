@@ -54,7 +54,31 @@ const projects = {};
 
 const experience = {};
 
-const education = {};
+const education = [
+	{
+		degree: "IMTech(CS)",
+		duration: "2018-2023",
+		institution: "University of Hyderabad",
+		grade: "9.32/10",
+		description:
+			"Pursuing a 5 year integrated masters in CS. Took multiple courses on OS, DBMS, Compiler Design, Networking, Computer Architecture, Distributed Computing and Data Processing",
+		website: "https://uohyd.ac.in",
+	},
+	{
+		degree: "11th & 12th",
+		duration: "2016-2018",
+		institution: "Ramaiah IIT Study Circle",
+		grade: "984/1000",
+		description:
+			"Pursued Sciences in my intermediate and achieved 6th highest mark in the state in the board exams. Also was among the top 1% in JEE Mains and TS EAMCET entrance exams",
+	},
+	{
+		degree: "10th",
+		duration: "2015-2016",
+		institution: "Dilsukhnagar Public School",
+		grade: "9.8/10",
+	},
+];
 
 const certificates = {};
 
