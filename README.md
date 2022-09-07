@@ -1,4 +1,4 @@
-<h1 align="center"> SimpleFolio 🔥 </h1> 
+<h1 align="center"> SimpleFolio 🚀 </h1> 
 <h3 align="center"> A Fully Customisable Portfolio Template For Minimalistic Lovers  </h3>
 
 <p align="center">
