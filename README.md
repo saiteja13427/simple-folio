@@ -14,7 +14,7 @@
 </p>
 
 <p align="center"> 
-    <img src="assets/images/SimpleFolio.png" align="center" height="150"></img>
+    <img src="assets/images/SimpleFolio.png" align="center"></img>
 </p>
 
 **Note: The Project is currently under development.**
